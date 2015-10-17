@@ -411,26 +411,26 @@ package com.sgn.starlingbuilder.editor.ui
             var item:NativeMenuItem = MainMenu.instance.getItemByName(MainMenu.REDO);
             if (hint)
             {
-                item.label = MainMenu.REDO + " " + hint;
-                item.enabled = true;
+                //item.label = MainMenu.REDO + " " + hint;
+                //item.enabled = true;
             }
             else
             {
-                item.label = MainMenu.REDO;
-                item.enabled = false;
+               // item.label = MainMenu.REDO;
+               // item.enabled = false;
             }
 
             hint = _documentManager.historyManager.getNextUndoHint();
             item = MainMenu.instance.getItemByName(MainMenu.UNDO);
             if (hint)
             {
-                item.label = MainMenu.UNDO + " " + hint;
-                item.enabled = true;
+                //item.label = MainMenu.UNDO + " " + hint;
+                //item.enabled = true;
             }
             else
             {
-                item.label = MainMenu.UNDO;
-                item.enabled = false;
+               // item.label = MainMenu.UNDO;
+               // item.enabled = false;
             }
 
         }
@@ -459,9 +459,9 @@ package com.sgn.starlingbuilder.editor.ui
             menu.registerAction(MainMenu.OPEN_WORKSPACE, onOpenWorkspace);
             menu.registerAction(MainMenu.EDIT_TEMPLATE, onEditTemplate);
 
-            menu.getItemByName(MainMenu.SHOW_TEXT_BORDER).checked = _documentManager.showTextBorder;
-            menu.getItemByName(MainMenu.SNAP_PIXEL).checked = _documentManager.snapPixel;
-            menu.getItemByName(MainMenu.RESIZABLE_BOX).checked = _documentManager.enableBoundingBox;
+            //menu.getItemByName(MainMenu.SHOW_TEXT_BORDER).checked = _documentManager.showTextBorder;
+            //menu.getItemByName(MainMenu.SNAP_PIXEL).checked = _documentManager.snapPixel;
+            //menu.getItemByName(MainMenu.RESIZABLE_BOX).checked = _documentManager.enableBoundingBox;
 
             menu.registerAction(MainMenu.UNDO, onUndo);
             menu.registerAction(MainMenu.REDO, onRedo);

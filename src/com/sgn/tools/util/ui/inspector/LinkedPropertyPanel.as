@@ -42,12 +42,14 @@ package com.sgn.tools.util.ui.inspector
 
         private function onPropertyChange(event:Event):void
         {
+			var param:Object;
+			
             if (_linkCheck.isSelected)
             {
                 var name:String = event.data.propertyName;
 
                 var found:Boolean = false;
-                for each (var param:Object in _params)
+                for each (param in _params)
                 {
                     if (param.name == name)
                     {
@@ -58,7 +60,7 @@ package com.sgn.tools.util.ui.inspector
 
                 if (found)
                 {
-                    for each (var param:Object in _params)
+                    for each (param in _params)
                     {
                         if (param.name == name)
                         {

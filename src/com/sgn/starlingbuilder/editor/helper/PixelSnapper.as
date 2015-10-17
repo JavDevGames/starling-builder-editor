@@ -216,31 +216,39 @@ package com.sgn.starlingbuilder.editor.helper
             var targetYXBound:Array = getXBoundary(data.targetObjY);
             var targetYYBound:Array = getYBoundary(data.targetObjY);
 
+			var x1:Number;
+			var y1:Number;
+			
+			var x2:Number;
+			var y2:Number;
+			
+			 var global1:Point
+			 var global2:Point
 
             if (data.targetObjX)
             {
-                var x1:Number = selectObjXBound[data.selectObjSnapXType];
-                var y1:Number = selectObjYBound[MIDDLE];
+                x1 = selectObjXBound[data.selectObjSnapXType];
+                y1 = selectObjYBound[MIDDLE];
 
-                var x2:Number = targetXXBound[data.targetObjSnapXType];
-                var y2:Number = targetXYBound[MIDDLE];
+                x2 = targetXXBound[data.targetObjSnapXType];
+                y2 = targetXYBound[MIDDLE];
 
-                var global1:Point = container.globalToLocal(new Point(x1, y1));
-                var global2:Point = container.globalToLocal(new Point(x2, y2));
+                global1 = container.globalToLocal(new Point(x1, y1));
+                global2 = container.globalToLocal(new Point(x2, y2));
 
                 container.addChild(DrawUtil.makeLine(global1.x, global1.y, global2.x, global2.y));
             }
 
             if (data.targetObjY)
             {
-                var x1:Number = selectObjXBound[MIDDLE];
-                var y1:Number = selectObjYBound[data.selectObjSnapYType];
+               x1= selectObjXBound[MIDDLE];
+               y1= selectObjYBound[data.selectObjSnapYType];
+               
+               x2= targetYXBound[MIDDLE];
+               y2= targetYYBound[data.targetObjSnapYType];
 
-                var x2:Number = targetYXBound[MIDDLE];
-                var y2:Number = targetYYBound[data.targetObjSnapYType];
-
-                var global1:Point = container.globalToLocal(new Point(x1, y1));
-                var global2:Point = container.globalToLocal(new Point(x2, y2));
+                global1 = container.globalToLocal(new Point(x1, y1));
+                global2 = container.globalToLocal(new Point(x2, y2));
 
                 container.addChild(DrawUtil.makeLine(global1.x, global1.y, global2.x, global2.y));
             }

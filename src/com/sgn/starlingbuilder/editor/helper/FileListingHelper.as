@@ -27,15 +27,15 @@ package com.sgn.starlingbuilder.editor.helper
             }
 
             var listing:Array = appDir.getDirectoryListing();
-            for each (var file:File in listing)
+            for each (var curFile:File in listing)
             {
-                if (file.name.charAt(0) == ".")
+                if (curFile.name.charAt(0) == ".")
                     continue;
 
-                if (postfix && postfix.indexOf(getPostfix(file.name).toLowerCase()) == -1)
+                if (postfix && postfix.indexOf(getPostfix(curFile.name).toLowerCase()) == -1)
                     continue;
 
-                array.push(stripPostfix(file.name));
+                array.push(stripPostfix(curFile.name));
             }
 
             return array;

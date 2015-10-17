@@ -128,7 +128,7 @@ package com.sgn.starlingbuilder.editor
             assetLoader.enqueue(_workspaceDir.resolvePath("backgrounds"));
             assetLoader.enqueue(_workspaceDir.resolvePath("libs"));
 
-            assetManager.loadQueue(function(ratio:Number){
+            assetManager.loadQueue(function(ratio:Number):void{
                 if (ratio == 1)
                 {
                     setTimeout(function():void{
@@ -253,7 +253,7 @@ package com.sgn.starlingbuilder.editor
             _toolbar.validate();
         }
 
-        function getImage():Image
+        private function getImage():Image
         {
             return Image(null);
         }

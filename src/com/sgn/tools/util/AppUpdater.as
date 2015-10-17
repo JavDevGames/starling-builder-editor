@@ -7,8 +7,7 @@
  */
 package com.sgn.tools.util
 {
-    import air.update.ApplicationUpdaterUI;
-
+    import air.update.ApplicationUpdaterUI; 
     import flash.events.Event;
     import flash.filesystem.File;
 

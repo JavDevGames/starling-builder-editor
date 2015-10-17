@@ -254,7 +254,7 @@ package com.sgn.tools.util.serialize
             _isDirty = value;
         }
 
-        public function customAction(customEventType:String)
+        public function customAction(customEventType:String):void
         {
             if (isDirty())
             {
